@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Share a Place</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <link rel="stylesheet" href="assets/styles/share-place.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="assets/scripts/SharePlace.js" defer></script>
+  </head>
+  <body>
+    <div class="back">
+
+    
+    <template id="modal-template">
+      <div class="backdrop"></div>
+      <div class="modal"></div>
+    </template>
+    <template id="loading-modal-content">
+      <div class="modal__content centered">
+        <div class="lds-dual-ring"></div>
+      </div>
+    </template>
+
+    <header>
+      <img src="assets/styles/logo5.gif" alt="logo" width="70" height="61"/>
+      <h1> INTERACTIVE WEB MAP </h1>
+      <!-- <img src="assets/styles/7.jpg" alt="logo" width="50" height="60"/> -->
+      <div class="menu">
+        
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="share-controls">
+      <input
+        id="share-link"
+        type="text"
+        readonly
+        value="Select a place to get a sharable link."
+      />
+      <button id="share-btn" disabled>Share Place</button>
+    </section>
+
+    <div id='animation'>
+       
+    </div>
+
+
+    <section id="selected-place">
+      <div id="map">
+        <p style="color:rgb(8, 8, 8)">
+          <strong>
+          You haven't selected any place yet. Please enter an address or locate
+          yourself!
+        </strong>
+        </p>
+      </div>
+    </section>
+     
+    
+    <section id="place-data">
+      <form>
+        <label for="address" style="color:rgb(12, 12, 12)">Address</label>
+        <input type="text" />
+        <button type="submit">Find Place</button>
+      </form>
+      <button id="locate-btn">Get Current Location</button>
+    </section>
+    <div class="footer">
+      
+      
+      <p>~Developed by - Mohammed Azim and Siva Guru</p>
+    </div>
+  </div>
+  </body>
+</html>
